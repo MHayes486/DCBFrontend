@@ -27,6 +27,10 @@ h1,h2,h3,h5,h6 {
   background-color: var(--base-btn-color);
   font-family: var(--base-btn-font-family);
   color: var(--base-btn-txt-color);
+  a{
+  font-family: var(--base-btn-font-family);
+  color: var(--base-btn-txt-color);
+  }
 }
 
 
@@ -46,6 +50,7 @@ a {
     background-color: var(--card-btn-bg-color);
     color: var(--card-btn-txt-color);
     font-family: var(--card-btn-font-family);
+    border-radius: 8px;
   }
 
   h1,h2{

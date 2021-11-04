@@ -7768,7 +7768,7 @@ var _Utils = _interopRequireDefault(require("./../../Utils"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["      \n      <div class=\"page-content page-centered\">\n        <div class=\"signinup-box\">\n          <img class=\"signinup-logo\" src=\"/images/logo.svg\">          \n          <sl-form class=\"form-signup dark-theme\" @sl-submit=", ">          \n            <div class=\"input-group\">\n              <sl-input name=\"email\" type=\"email\" placeholder=\"Email\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"password\" type=\"password\" placeholder=\"Password\" required toggle-password></sl-input>\n            </div>\n            <sl-button class=\"submit-btn\" type=\"primary\" submit style=\"width: 100%;\">Sign In</sl-button>\n          </sl-form>\n          <p>No Account? <a href=\"/signup\" @click=", ">Sign Up</a></p>\n        </div>\n      </div>\n    "]);
+  const data = _taggedTemplateLiteral(["\n      <div class=\"page-content page-centered\">\n        <div class=\"card\">\n          <div class=\"signinup-box\">\n            <img class=\"signinup-logo\" src=\"/images/logo.svg\" />\n            <sl-form\n              class=\"form-signup dark-theme\"\n              @sl-submit=", "\n            >\n              <div class=\"input-group\">\n                <sl-input\n                  name=\"email\"\n                  type=\"email\"\n                  placeholder=\"Email\"\n                  required\n                ></sl-input>\n              </div>\n              <div class=\"input-group\">\n                <sl-input\n                  name=\"password\"\n                  type=\"password\"\n                  placeholder=\"Password\"\n                  required\n                  toggle-password\n                ></sl-input>\n              </div>\n              <sl-button\n                class=\"submit-btn\"\n                type=\"primary\"\n                submit\n                style=\"width: 100%;\"\n                pill\n                >Sign In</sl-button\n              >\n            </sl-form>\n            <p>\n              No Account?\n              <a href=\"/signup\" @click=", "\n                ><div class=\"btn\">Sign Up</div></a\n              >\n            </p>\n          </div>\n        </div>\n      </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -7781,8 +7781,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 class SignInView {
   init() {
-    console.log('SignInView.init');
-    document.title = 'Sign In';
+    console.log("SignInView.init");
+    document.title = "Sign In";
     this.render();
 
     _Utils.default.pageIntroAnim();
@@ -7791,11 +7791,11 @@ class SignInView {
   signInSubmitHandler(e) {
     e.preventDefault();
     const formData = e.detail.formData;
-    const submitBtn = document.querySelector('.submit-btn');
-    submitBtn.setAttribute('loading', ''); // sign in using Auth    
+    const submitBtn = document.querySelector(".submit-btn");
+    submitBtn.setAttribute("loading", ""); // sign in using Auth
 
     _Auth.default.signIn(formData, () => {
-      submitBtn.removeAttribute('loading');
+      submitBtn.removeAttribute("loading");
     });
   }
 
@@ -15905,7 +15905,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60807" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58902" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,0 +1,13 @@
+Log (28/10/2021)
+	-Backend changed to new location, 1 dentist added, postman saved to add more, however error for date occurring.
+	-Frontend
+		-Created card SCSS file, with colours and font styles set
+		-modified var.scss to have the "standard colors"
+
+29/10/21
+	-Frontend
+		-modified base sass file to include variables created, also deleted card sass to place in main file
+
+5/11
+	Moved files into new Vanilla App (above)
+	-Frontend started working on card styling for signin (and for template).
