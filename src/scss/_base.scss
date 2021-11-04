@@ -1,0 +1,183 @@
+// Base
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+}
+
+body {
+  padding: 0;  
+  margin: 0;
+  color: var(--base-txt-color);
+  font-family: var(--base-font-family);
+  font-weight: 300;
+  background: var(--base-body-bg);
+  height: 100vh;
+}
+
+
+// headings ------------
+h1,h2,h3,h5,h6 {
+  margin: 0 0 .5em;
+  color: var(--heading-color);
+  font-family: var(--heading-font-family);
+}
+
+.btn{
+  background-color: var(--base-btn-color);
+  font-family: var(--base-btn-font-family);
+  color: var(--base-btn-txt-color);
+}
+
+
+
+// links ---------------
+a {
+  color: var(--base-link-color);
+  font-family: var(--base-link-font-family);
+  size: var(--base-link-size);
+}
+
+
+.card {
+  background-color: var(--card-body-bg-color);
+  font-family: var(--card-heading-font-family);
+  .btn{
+    background-color: var(--card-btn-bg-color);
+    color: var(--card-btn-txt-color);
+    font-family: var(--card-btn-font-family);
+  }
+
+  h1,h2{
+    color:var(--card-heading-color);
+  }
+
+  h3,h4,h5,h6{
+    color:var(--card-subheading-color);
+    font-family: var(--card-subheading-font-family);
+  }
+
+  .input-field{
+    background-color: var(--card-field-bg-color);
+    color: var(--card-field-txt-color);
+    font-family: var(--card-field-font-family);
+  }
+}
+
+// root ---------------
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;  
+  overflow: hidden;
+}
+
+
+// app splash screen -------
+.app-splash {
+  position: fixed;
+  background: #fff;
+  color: #777;
+  display: flex;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .app-logo {
+    width: 180px;
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+
+// helper classes ---------
+.calign {
+  text-align: center;
+}
+
+.large-text {
+  font-size: 1.6em;
+}
+
+.brand-color {
+  color: var(--brand-color);
+}
+
+// generic-entry ------------
+.generic-entry {
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.07);
+  border-radius: 5px;
+  margin-bottom: .5em;
+  padding: 1em;
+  background: #fff;
+}
+
+
+
+// page --------------------
+.page-content {
+  position: absolute;
+  top: var(--app-header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  padding: 1em;
+  &.no-pad {
+    padding: 0;
+  }
+}
+
+.page-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// sign in + sign up pages ----------
+.signinup-box,
+.signup-box {  
+  max-width: 320px;
+  text-align: center;
+}
+
+.signinup-logo {
+  width: 200px;
+  margin-bottom: 1em;
+}
+
+// guide page ---------------
+.guide-step {
+  padding: 1em;
+  margin: 1.5em auto;
+  max-width: 600px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// RESPONSIVE - MOBILE -------------------
+@media all and (max-width: 768px){ 
+
+  .signinup-box {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+//haircut grid
+.haircuts-grid{
+  display:flex;
+  flex-wrap: wrap;
+  .haircut-card{
+    width:calc(33.3%-1em);
+    margin: 0.5em;
+  }
+}
