@@ -6,6 +6,14 @@ sl-dialog::part(title){
   font-size: 1.6em;
 }
 
+sl-button{
+    background-color: var(--card-btn-bg-color);
+    color: var(--card-btn-txt-color);
+    font-family: var(--card-btn-font-family);
+    border-radius: 8px;
+    padding: 5px;
+}
+
 
 // RESPONSIVE - MOBILE -------------------
 @media all and (max-width: 768px){ 

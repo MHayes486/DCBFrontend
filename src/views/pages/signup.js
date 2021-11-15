@@ -1,38 +1,40 @@
-import App from './../../App'
-import Auth from './../../Auth'
-import {html, render } from 'lit-html'
-import {anchorRoute, gotoRoute} from './../../Router'
-import Utils from './../../Utils'
+import App from "./../../App";
+import Auth from "./../../Auth";
+import { html, render } from "lit-html";
+import { anchorRoute, gotoRoute } from "./../../Router";
+import Utils from "./../../Utils";
 
-class SignUpView{
-   
-  init(){      
-    console.log('SignUpView.init')  
-    document.title = 'Sign In'    
-    this.render()
-    Utils.pageIntroAnim()
+class SignUpView {
+  init() {
+    console.log("SignUpView.init");
+    document.title = "Sign In";
+    this.render();
+    Utils.pageIntroAnim();
   }
 
-  signUpSubmitHandler(e){
-    e.preventDefault()    
-    const submitBtn = document.querySelector('.submit-btn')
-    submitBtn.setAttribute('loading', '')    
-    const formData = e.detail.formData
-    
+  signUpSubmitHandler(e) {
+    e.preventDefault();
+    const submitBtn = document.querySelector(".submit-btn");
+    submitBtn.setAttribute("loading", "");
+    const formData = e.detail.formData;
+
     // sign up using Auth
     Auth.signUp(formData, () => {
-      submitBtn.removeAttribute('loading')
-    })   
+      submitBtn.removeAttribute("loading");
+    });
   }
 
-  render(){
+  render() {
     const template = html`      
       <div class="page-content page-centered">      
+      <div class="">
         <div class="signinup-box">
         <img class="signinup-logo" src="/images/logo.svg">
           <h1>Sign Up</h1>
           <sl-form class="form-signup" @sl-submit=${this.signUpSubmitHandler}>
             <div class="input-group">
+              <sl-input name="title" type="text" placeholder="title" required></sl-input>
+            </div>
               <sl-input name="firstName" type="text" placeholder="First Name" required></sl-input>
             </div>
             <div class="input-group">
@@ -42,6 +44,12 @@ class SignUpView{
               <sl-input name="email" type="email" placeholder="Email" required></sl-input>
             </div>
             <div class="input-group">
+              <sl-input name="dOB" type="date" required></sl-input>
+            </div>
+            <div class="input-group">
+              <sl-input name="contactNumber" type="String" placeholder="Contact Number" required></sl-input>
+            </div>
+            <div class="input-group">
               <sl-input name="password" type="password" placeholder="Password" required toggle-password></sl-input>
             </div>            
             <sl-button type="primary" class="submit-btn" submit style="width: 100%;">Sign Up</sl-button>
@@ -49,10 +57,10 @@ class SignUpView{
           <p>Have an account? <a href="/signin" @click=${anchorRoute}>Sign In</a></p>
         </div>
       </div>
-    `
-    render(template, App.rootEl)
+      </div>
+    `;
+    render(template, App.rootEl);
   }
 }
 
-
-export default new SignUpView()
+export default new SignUpView();

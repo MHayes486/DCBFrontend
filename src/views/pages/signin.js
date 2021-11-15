@@ -7,7 +7,7 @@ import Utils from "./../../Utils";
 class SignInView {
   init() {
     console.log("SignInView.init");
-    document.title = "Sign In";
+    document.title = "DCB Sign In";
     this.render();
     Utils.pageIntroAnim();
   }
@@ -52,8 +52,8 @@ class SignInView {
                 ></sl-input>
               </div>
               <sl-button
-                class="submit-btn"
-                type="primary"
+                class="submit-btn btn"
+                type="primary" outline
                 submit
                 style="width: 100%;"
                 pill

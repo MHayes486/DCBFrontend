@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+    background: var(--base-body-bg);
 }
 
 body {
@@ -46,11 +47,20 @@ a {
 .card {
   background-color: var(--card-body-bg-color);
   font-family: var(--card-heading-font-family);
+   padding: 1em;
+   border-radius: 35px;
+
   .btn{
     background-color: var(--card-btn-bg-color);
     color: var(--card-btn-txt-color);
     font-family: var(--card-btn-font-family);
     border-radius: 8px;
+    padding: 5px;
+  }
+
+  ::placeholder{
+      font-family: var(--card-field-font-family);
+       color: var(--card-field-txt-color);
   }
 
   h1,h2{
@@ -137,12 +147,15 @@ a {
   &.no-pad {
     padding: 0;
   }
+    background: var(--base-body-bg);
+
 }
 
 .page-centered {
   display: flex;
   align-items: center;
   justify-content: center;
+    background: var(--card-bg-bg-color);
 }
 
 // sign in + sign up pages ----------

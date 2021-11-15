@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 export default class Toast {
 
   static init(){
-    this.showDuration = 2.5
+    this.showDuration = 4.5
     // create container element
     this.containerEl = document.createElement('div')
     this.containerEl.id = 'toasts'    

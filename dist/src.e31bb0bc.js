@@ -7421,7 +7421,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 class Toast {
   static init() {
-    this.showDuration = 2.5; // create container element
+    this.showDuration = 4.5; // create container element
 
     this.containerEl = document.createElement('div');
     this.containerEl.id = 'toasts'; // append to <body>
@@ -7768,7 +7768,7 @@ var _Utils = _interopRequireDefault(require("./../../Utils"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <div class=\"page-content page-centered\">\n        <div class=\"card\">\n          <div class=\"signinup-box\">\n            <img class=\"signinup-logo\" src=\"/images/logo.svg\" />\n            <sl-form\n              class=\"form-signup dark-theme\"\n              @sl-submit=", "\n            >\n              <div class=\"input-group\">\n                <sl-input\n                  name=\"email\"\n                  type=\"email\"\n                  placeholder=\"Email\"\n                  required\n                ></sl-input>\n              </div>\n              <div class=\"input-group\">\n                <sl-input\n                  name=\"password\"\n                  type=\"password\"\n                  placeholder=\"Password\"\n                  required\n                  toggle-password\n                ></sl-input>\n              </div>\n              <sl-button\n                class=\"submit-btn\"\n                type=\"primary\"\n                submit\n                style=\"width: 100%;\"\n                pill\n                >Sign In</sl-button\n              >\n            </sl-form>\n            <p>\n              No Account?\n              <a href=\"/signup\" @click=", "\n                ><div class=\"btn\">Sign Up</div></a\n              >\n            </p>\n          </div>\n        </div>\n      </div>\n    "]);
+  const data = _taggedTemplateLiteral(["\n      <div class=\"page-content page-centered\">\n        <div class=\"card\">\n          <div class=\"signinup-box\">\n            <img class=\"signinup-logo\" src=\"/images/logo.svg\" />\n            <sl-form\n              class=\"form-signup dark-theme\"\n              @sl-submit=", "\n            >\n              <div class=\"input-group\">\n                <sl-input\n                  name=\"email\"\n                  type=\"email\"\n                  placeholder=\"Email\"\n                  required\n                ></sl-input>\n              </div>\n              <div class=\"input-group\">\n                <sl-input\n                  name=\"password\"\n                  type=\"password\"\n                  placeholder=\"Password\"\n                  required\n                  toggle-password\n                ></sl-input>\n              </div>\n              <sl-button\n                class=\"submit-btn btn\"\n                type=\"primary\" outline\n                submit\n                style=\"width: 100%;\"\n                pill\n                >Sign In</sl-button\n              >\n            </sl-form>\n            <p>\n              No Account?\n              <a href=\"/signup\" @click=", "\n                ><div class=\"btn\">Sign Up</div></a\n              >\n            </p>\n          </div>\n        </div>\n      </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -7782,7 +7782,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 class SignInView {
   init() {
     console.log("SignInView.init");
-    document.title = "Sign In";
+    document.title = "DCB Sign In";
     this.render();
 
     _Utils.default.pageIntroAnim();
@@ -7830,7 +7830,7 @@ var _Utils = _interopRequireDefault(require("./../../Utils"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["      \n      <div class=\"page-content page-centered\">      \n        <div class=\"signinup-box\">\n        <img class=\"signinup-logo\" src=\"/images/logo.svg\">\n          <h1>Sign Up</h1>\n          <sl-form class=\"form-signup\" @sl-submit=", ">\n            <div class=\"input-group\">\n              <sl-input name=\"firstName\" type=\"text\" placeholder=\"First Name\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"lastName\" type=\"text\" placeholder=\"Last Name\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"email\" type=\"email\" placeholder=\"Email\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"password\" type=\"password\" placeholder=\"Password\" required toggle-password></sl-input>\n            </div>            \n            <sl-button type=\"primary\" class=\"submit-btn\" submit style=\"width: 100%;\">Sign Up</sl-button>\n          </sl-form>\n          <p>Have an account? <a href=\"/signin\" @click=", ">Sign In</a></p>\n        </div>\n      </div>\n    "]);
+  const data = _taggedTemplateLiteral(["      \n      <div class=\"page-content page-centered\">      \n      <div class=\"\">\n        <div class=\"signinup-box\">\n        <img class=\"signinup-logo\" src=\"/images/logo.svg\">\n          <h1>Sign Up</h1>\n          <sl-form class=\"form-signup\" @sl-submit=", ">\n            <div class=\"input-group\">\n              <sl-input name=\"title\" type=\"text\" placeholder=\"title\" required></sl-input>\n            </div>\n              <sl-input name=\"firstName\" type=\"text\" placeholder=\"First Name\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"lastName\" type=\"text\" placeholder=\"Last Name\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"email\" type=\"email\" placeholder=\"Email\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"dOB\" type=\"date\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"contactNumber\" type=\"String\" placeholder=\"Contact Number\" required></sl-input>\n            </div>\n            <div class=\"input-group\">\n              <sl-input name=\"password\" type=\"password\" placeholder=\"Password\" required toggle-password></sl-input>\n            </div>            \n            <sl-button type=\"primary\" class=\"submit-btn\" submit style=\"width: 100%;\">Sign Up</sl-button>\n          </sl-form>\n          <p>Have an account? <a href=\"/signin\" @click=", ">Sign In</a></p>\n        </div>\n      </div>\n      </div>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -7843,8 +7843,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 class SignUpView {
   init() {
-    console.log('SignUpView.init');
-    document.title = 'Sign In';
+    console.log("SignUpView.init");
+    document.title = "Sign In";
     this.render();
 
     _Utils.default.pageIntroAnim();
@@ -7852,12 +7852,12 @@ class SignUpView {
 
   signUpSubmitHandler(e) {
     e.preventDefault();
-    const submitBtn = document.querySelector('.submit-btn');
-    submitBtn.setAttribute('loading', '');
+    const submitBtn = document.querySelector(".submit-btn");
+    submitBtn.setAttribute("loading", "");
     const formData = e.detail.formData; // sign up using Auth
 
     _Auth.default.signUp(formData, () => {
-      submitBtn.removeAttribute('loading');
+      submitBtn.removeAttribute("loading");
     });
   }
 
@@ -13924,7 +13924,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 class App {
   constructor() {
-    this.name = "Haircuts";
+    this.name = "DCB Bookings";
     this.version = "1.0.0";
     this.apiBase = 'http://localhost:3000';
     this.rootEl = document.getElementById("root");
@@ -15905,7 +15905,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58902" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52192" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

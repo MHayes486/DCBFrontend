@@ -24,6 +24,7 @@
   --card-field-txt-color: #000;
   --card-field-font-family: "Libre Baskerville", serif;
   --card-field-bg-color: #f0f0f0;
+  --card-bg-bg-color: #a5b8b8;
   --card-btn-txt-color: #fff;
   --card-btn-bg-color: #B08010;
   --card-btn-font-family: "Merriweather", serif;
@@ -49,6 +50,7 @@
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  background: var(--base-body-bg);
 }
 
 body {
@@ -86,12 +88,19 @@ a {
 .card {
   background-color: var(--card-body-bg-color);
   font-family: var(--card-heading-font-family);
+  padding: 1em;
+  border-radius: 35px;
 }
 .card .btn {
   background-color: var(--card-btn-bg-color);
   color: var(--card-btn-txt-color);
   font-family: var(--card-btn-font-family);
   border-radius: 8px;
+  padding: 5px;
+}
+.card ::placeholder {
+  font-family: var(--card-field-font-family);
+  color: var(--card-field-txt-color);
 }
 .card h1, .card h2 {
   color: var(--card-heading-color);
@@ -162,6 +171,7 @@ a {
   bottom: 0;
   overflow-y: scroll;
   padding: 1em;
+  background: var(--base-body-bg);
 }
 .page-content.no-pad {
   padding: 0;
@@ -171,6 +181,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--card-bg-bg-color);
 }
 
 .signinup-box,
@@ -220,6 +231,14 @@ a {
 sl-dialog::part(title) {
   font-weight: 500;
   font-size: 1.6em;
+}
+
+sl-button {
+  background-color: var(--card-btn-bg-color);
+  color: var(--card-btn-txt-color);
+  font-family: var(--card-btn-font-family);
+  border-radius: 8px;
+  padding: 5px;
 }
 
 @media all and (max-width: 768px) {
